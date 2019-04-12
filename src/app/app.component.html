@@ -1,0 +1,17 @@
+<app-header
+    [score]="score"
+    (gameStarted)="onGameStarted()"
+>
+</app-header>
+<app-quiz
+    [hidden]="!gameStarted"
+    [quizId]="quizId"
+    (questionAnswered)="onQuestionAnswered()"
+    (quizEnded)="onQuizEnded()"
+>
+</app-quiz>
+<app-modal
+    #modal
+    [score]="score"
+>
+</app-modal>

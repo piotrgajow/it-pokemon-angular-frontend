@@ -1,0 +1,51 @@
+<div
+    class="container shadow mt-5 py-5"
+    [class.bg-success]="result && result.correct"
+    [class.bg-danger]="result && !result.correct"
+>
+    <div class="grid-wrapper">
+        <h1 class="display-4 text-center"
+            [hidden]="!question"
+        >
+            {{question?.name}}
+        </h1>
+        <h1 class="display-4 text-center"
+            [hidden]="!result"
+        >
+            {{result?.details.name}}
+        </h1>
+        <p class="text-center"
+           [hidden]="!result"
+        >
+            {{result?.correct ? 'You are correct!' : 'You are wrong!'}}
+            <a class="text-white"
+               target="_blank"
+               [href]="result?.details.url"
+            >
+                {{result?.details.name}}
+            </a>
+            is {{result?.details.type === 0 ? 'a Pokemon' : 'IT related'}} name!
+        </p>
+        <button id="btn-answer-0"
+                class="btn btn-info btn-big"
+                [hidden]="!question"
+                (click)="answer(0)"
+        >
+            Pokemon
+        </button>
+        <button id="btn-answer-1"
+                class="btn btn-info btn-big"
+                [hidden]="!question"
+                (click)="answer(1)"
+        >
+            IT
+        </button>
+        <button id="next-question"
+                class="btn btn-info btn-big"
+                [hidden]="!result"
+                (click)="loadQuestion()"
+        >
+            Next question
+        </button>
+    </div>
+</div>
