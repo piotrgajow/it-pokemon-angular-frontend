@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { BackendService } from './backend.service';
-import { Quiz, Score } from './data';
+import { Quiz, Score } from './domain';
 import { ModalComponent } from './modal/modal.component';
 
 @Component({

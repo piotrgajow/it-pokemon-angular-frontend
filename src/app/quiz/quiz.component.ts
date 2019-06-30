@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BackendService } from '../backend.service';
-import { Answer, AnswerResult, Question } from '../data';
+import { Answer, AnswerResult, Question } from '../domain';
 
 @Component({
   selector: 'app-quiz',
