@@ -34,7 +34,7 @@ export class BackendService {
 
 }
 
-const API = 'http://localhost:8090';
+const API = 'http://it-pokemon.webappcraft.com:8090';
 
 function buildUrl(...endpointParts: Array<string | number>): string {
     return `${API}/${endpointParts.join('/')}`;
